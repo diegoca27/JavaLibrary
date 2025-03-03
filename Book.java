@@ -9,10 +9,10 @@ public class Book{
     
     //Constructor
     public Book(String title, String author, int isbn, int availableCopies){
-        this.title = "";
-        this.author = "";
-        this.isbn = 0;
-        this.availableCopies = 0;
+        this.title = title;
+        this.author = author;
+        this.isbn = isbn;
+        this.availableCopies = availableCopies;
     }
 
     public String getTitle(){

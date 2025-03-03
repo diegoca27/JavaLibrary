@@ -7,8 +7,13 @@ public class Library {
     private List<Book> books;
     private List<Patron> patrons;
 
+    public Library() {
+        this.books = new ArrayList<>();
+        this.patrons = new ArrayList<>();
+    }
+
     public void addBook(String title, String author, int availableCopies){
-        int isbn = books.size() + 1;
+        int isbn = books.size();
         Book b = new Book(title, author, isbn, availableCopies);
         books.add(b);
     }
@@ -18,7 +23,7 @@ public class Library {
     }
 
     public void displayBook(Book book){
-        System.out.println("********* Book " + i + " *********");
+        System.out.println("********* Book " + book.getISBN() + " *********");
         System.out.println("Title: " + book.getTitle());
         System.out.println("Author: " + book.getAuthor());
         System.out.println("ISBN: " + book.getISBN());
